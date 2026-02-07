@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* Navigation Container */
+#page-nav {
+    position: fixed;
+    z-index: 1000;
+    font-family: "Noto Serif JP", serif;
+}
+
+/* PC Design (Right Side) */
+@media screen and (min-width: 769px) {
+    #page-nav {
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px 10px;
+        border-radius: 40px;
+        /* Rounded pill shape like a strip of paper */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #page-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    #page-nav li {
+        position: relative;
+    }
+
+    #page-nav a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+        writing-mode: vertical-rl;
+        /* Vertical text */
+        text-orientation: upright;
+        letter-spacing: 0.2em;
+        padding: 5px;
+        transition: all 0.3s ease;
+        opacity: 0.6;
+    }
+
+    /* Active State (Red) */
+    #page-nav li.active a {
+        color: #c55050;
+        font-weight: 700;
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    /* Active Indicator (Japanese decoration style) */
+    #page-nav li.active::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: -8px;
+        /* Slightly outside to the right or left */
+        transform: translateY(-50%);
+        width: 4px;
+        height: 80%;
+        background-color: #c55050;
+        border-radius: 2px;
+    }
+
+    /* Optional: Small "red stamp" effect behind text on hover/active
+    #page-nav li.active a {
+        background-image: radial-gradient(circle, rgba(197, 80, 80, 0.1) 0%, transparent 70%);
+    }
+    */
+}
+
+/* Mobile Design (Bottom Fixed) */
+@media screen and (max-width: 768px) {
+    #page-nav {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        border-top: 1px solid #eee;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        padding: 8px 0 20px;
+        /* Safe area for modern phones */
+    }
+
+    /* Progress Bar */
+    #scroll-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: #c55050;
+        width: 0%;
+        transition: width 0.1s linear;
+    }
+
+    #page-nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #page-nav li {
+        flex: 1;
+        text-align: center;
+    }
+
+    #page-nav a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #666;
+        font-size: 10px;
+        transition: color 0.3s;
+    }
+
+    #page-nav .nav-icon {
+        font-size: 16px;
+        margin-bottom: 4px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: #ddd;
+        /* Fallback */
+        mask-size: contain;
+        -webkit-mask-size: contain;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-position: center;
+        -webkit-mask-position: center;
+        background-color: #999;
+    }
+
+    /* Icons (using FontAwesome since it's linked in index.html) */
+    #page-nav .nav-icon {
+        background: none;
+        /* Reset mask for fontawesome */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+    }
+
+    /* Active State Mobile */
+    #page-nav li.active a {
+        color: #c55050;
+    }
+
+    #page-nav li.active .nav-icon {
+        transform: translateY(-2px);
+        transition: transform 0.3s;
+    }
+}

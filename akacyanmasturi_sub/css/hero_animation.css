@@ -1,0 +1,54 @@
+/* Hero Animation */
+#opening-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    /* 背景色 */
+    z-index: 999999;
+    /* 最前面に配置 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#opening-loader .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#opening-loader .hero-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 1.5rem;
+    /* 5rem might be too big for mobile, maybe make it responsive or smaller base */
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: #b21010;
+    /* 文字色 */
+    opacity: 0;
+    /* 最初は隠しておく */
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+#opening-loader .hero-logo {
+    width: 140px;
+    /* Adjust size as needed */
+    height: auto;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+@media only screen and (min-width: 769px) {
+    #opening-loader .hero-text {
+        font-size: 2.5rem;
+    }
+
+    #opening-loader .hero-logo {
+        width: 210px;
+    }
+}

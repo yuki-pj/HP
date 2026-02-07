@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* Fade Up Animation */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Micro-interactions */
+button.more01,
+button.more02,
+.f-btn,
+input[type="submit"] {
+    transition: all 0.3s ease !important;
+    transform: translateY(0);
+}
+
+button.more01:hover,
+button.more02:hover,
+.f-btn:hover,
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(178, 16, 16, 0.3);
+}
+
+/* Floating FAB */
+.fab-apply {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background-color: #b21010;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    text-decoration: none;
+    display: none;
+    /* Hidden by default, shown by JS scroll */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fab-apply.visible {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fab-apply:hover {
+    background-color: #d91c1c;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .fab-apply {
+        padding: 12px 20px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+}

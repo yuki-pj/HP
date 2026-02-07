@@ -1,0 +1,1133 @@
+@charset "UTF-8";
+
+a:hover {
+    opacity: 0.8;
+}
+
+.l-container {
+    min-width: auto;
+    overflow: hidden;
+}
+
+/*ここから専用CSS*/
+
+/* ショップリングバナー非表示 */
+.shop-link {
+    display: none;
+}
+
+/* アニメーションの定義 */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        /* 開始位置 */
+    }
+
+    50% {
+        transform: translateY(-20px);
+        /* 上に20px移動（浮く） */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* 元の位置に戻る */
+    }
+}
+
+/* 要素への適用 */
+.floating-element {
+    animation: float 3s ease-in-out infinite;
+    /* floatという名前のアニメーションを3秒かけて実行
+     ease-in-outで滑らかに加速・減速
+     infiniteで無限ループ */
+    will-change: transform;
+    /* パフォーマンス最適化 */
+}
+
+body {
+    background-image: url("../media/data/themes/getta/img/washi_texture_light.png");
+    background-repeat: repeat;
+}
+
+/*既存CSS打ち消し用*/
+
+h4 {
+    position: relative;
+    padding-bottom: 0;
+    letter-spacing: .05em;
+    font-family: "Noto Sans JP";
+    font-weight: 400;
+}
+
+h4:before {
+    position: rerative;
+    content: "";
+    height: 0px;
+    width: 0px;
+    bottom: 0;
+    left: 0;
+    background: none;
+}
+
+.l-main {
+    margin-bottom: 0;
+}
+
+/* ベース*/
+* {
+    box-sizing: border-box;
+}
+
+main {
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #333 !important;
+    letter-spacing: 0.05em !important;
+    text-size-adjust: 100% !important;
+    font-family: "Noto Sans JP", san-serif !important;
+    font-feature-settings: "palt" !important;
+    /* text-align: justify; */
+}
+
+.all_wrapper {
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+h2:not(.top) {
+    margin-top: 40px;
+    font-size: 36px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #e97373;
+    text-align: center;
+}
+
+h3:not(.top) {
+    font-family: "Noto Sans JP";
+    font-size: 1.7em;
+    padding: 12px 24px;
+    font-weight: 700;
+    line-height: 1.7;
+    background-color: #fceded;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+h4:not(.top) {
+    font-size: 1.4em;
+    color: #e97373;
+    margin-bottom: 24px;
+}
+
+.section {
+    margin-top: 80px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.strong_text {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-top: 16px;
+}
+
+.highlight {
+    color: #d54f4f;
+    text-underline-offset: 0.3em;
+    text-decoration: underline;
+    /* text-decoration-thickness: 0.5em; */
+    text-decoration-color: #d54f4f;
+    /* text-underline-offset: -0.2em;  */
+    text-decoration-skip-ink: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.down-to-top .scrollin {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text_link {
+    color: #fff;
+    padding-bottom: 2px;
+    text-decoration: underline #fff;
+}
+
+.pc_none {
+    display: none;
+}
+
+
+.g_map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ベースCSSおわり */
+
+
+.mv {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: kenBurns 20s ease-out infinite alternate;
+}
+
+@keyframes kenBurns {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.main_title_text {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+.reason {
+    width: 700px;
+    margin: 60px auto 0;
+    padding: 24px 24px 40px;
+    background-color: #FFF6E9;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.reason h3:not(.top) {
+    background-color: #FFF6E9;
+    padding: 0px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.logo-baby {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.reason_text {
+    display: flex;
+}
+
+.shine_logo {
+    width: 30%;
+}
+
+.reason h4:not(.top) {
+    display: inline-block;
+    margin-top: 40px;
+    border-bottom: 1px dashed #d8a326;
+}
+
+.reason .bold {
+    font-size: 1.2em;
+    margin-bottom: 16px;
+}
+
+/* 神社について */
+
+.shine_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+}
+
+
+.shine .left {
+    width: 60%;
+    margin-right: 40px;
+}
+
+
+.shine .right {
+    width: 40%;
+}
+
+.shine .right img {
+    height: 240px;
+    border-radius: 12px;
+}
+
+/* 赤ちゃん祭りを通じて行うこと */
+
+.action,
+.babyload {
+    padding: 60px 0;
+    background-color: #c55050;
+}
+
+.action h3:not(.top),
+.babyload h3:not(.top) {
+    color: #fff;
+    background-color: #c55050;
+    text-align: center;
+}
+
+.action_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    width: 960px;
+    margin: auto;
+}
+
+.action_grid-item {
+    color: #793c3c;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.action-img {
+    margin-top: 16px;
+}
+
+/* ３つの使命 */
+.misson_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.misson_item {
+    width: 30%;
+}
+
+.misson_title {
+    display: flex;
+}
+
+.misson_icon {
+    width: 12%;
+    margin-right: 12px;
+    align-items: center;
+}
+
+.misson_icon img {
+    border-radius: 100px;
+}
+
+.misson_text {
+    padding: 24px;
+    background-color: #f5f5f5;
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 2;
+    border-radius: 12px;
+}
+
+/* 産守さん */
+.instructor {
+    padding: 60px 0;
+    background-color: #fdf9eb;
+}
+
+.instructor h3:not(.top) {
+    text-align: center;
+    background-color: #fdf9eb;
+}
+
+.instructor .lead {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sanshu_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.instructor .left {
+    width: 50%;
+}
+
+.instructor .right {
+    width: 40%;
+}
+
+
+.instructor-item {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 24px;
+
+}
+
+.instructor-item p {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.sanshu_img {
+    padding: 20px
+}
+
+.sanshu_img img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.sanshu_img p {
+    text-align: center;
+}
+
+/* 体験できること */
+
+.experience_list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+
+.experience_list li {
+    padding: 24px;
+    width: 48%;
+    border-radius: 12px;
+    border: #fdd7d7 2px dashed;
+}
+
+.experience_list li h4 {
+    margin-bottom: 8px;
+}
+
+.experience_text {
+    display: flex;
+}
+
+.experience_text::before {
+    content: "";
+    background-image: url(../media/data/media/20231011/media/getta/page/project/akachan-matsuri/check_circle.svg);
+    width: 16px;
+    height: 16px;
+    margin: 6px 8px 0 0;
+}
+
+.experience_img {
+    margin-top: 24px;
+}
+
+.experience .strong_text {
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+.babyload h4:not(.top) {
+    color: #fff;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.babyload h4 span {
+    display: block;
+    font-size: 15px;
+}
+
+.babyload .strong_text {
+    background-color: #fff;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.babyload-about {
+    padding: 0 24px 24px;
+    border: #f5f5f5 1px solid;
+    border-radius: 12px;
+    margin-top: 40px;
+}
+
+.babyload_text-title {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.babyload_text {
+    margin-top: 16px;
+    color: #fff;
+}
+
+.babyload_item {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin-top: 24px;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.babyload_item .left {
+    width: 30%;
+    margin-right: 16px;
+}
+
+.babyload_item .right {
+    width: 68%;
+}
+
+.babyload_item-text {
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.babyload_height {
+    color: #fff;
+    margin-top: 24px;
+    display: flex;
+}
+
+.babyload_height::before {
+    content: "";
+    background-image: url(../media/data/media/20231011/media/getta/page/project/akachan-matsuri/check_circle_wh.svg);
+    width: 24px;
+    height: 20px;
+    margin: 6px 8px 0 0;
+}
+
+.babyload_mind {
+    margin-top: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.babyload_mind h4:not(.top) {
+    margin-top: 0;
+    text-align: left;
+}
+
+.babyload_mind .left {
+    width: 50%;
+}
+
+.babyload_mind .right {
+    width: 40%;
+    background-color: #fdf9eb;
+    border-radius: 8px;
+}
+
+.babyload_mind-text {
+    font-size: 18px;
+    margin-bottom: 1em;
+    line-height: 2;
+}
+
+.babyload_mind-text .highlight {
+    color: #fff;
+    text-decoration-color: #ffffff;
+}
+
+/*質問テキスト*/
+
+.faq h4:not(.top) {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.cp_qa02 {
+    margin: 0 auto;
+}
+
+.cp_qa02 .cp_actab input[type=checkbox] {
+    display: none;
+}
+
+.cp_qa02 .cp_actab {
+    padding: 16px 0;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.cp_qa02 label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    width: calc(100% - 70px);
+    margin: 0 0 0 50px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+/*＋アイコン*/
+.cp_qa02 label::before {
+    position: absolute;
+    content: '+';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 180%;
+    font-weight: 400;
+    margin-left: -50px;
+    padding: 0 0 0 0;
+    transition: 0.4s ease;
+}
+
+.cp_qa02 .cp_actab input[type=checkbox]:checked~label::before {
+    transform: rotate(45deg);
+}
+
+/*答えテキスト*/
+.cp_qa02 .cp_actab-content {
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    margin: 0 40px;
+    padding: 0 14px;
+    transition: 0.4s ease;
+    opacity: 0;
+}
+
+.cp_qa02 .cp_actab input[type=checkbox]:checked~.cp_actab-content {
+    height: auto;
+    padding: 14px;
+    opacity: 1;
+}
+
+.akachan_footer {
+    color: #fff;
+    background-color: #d2613c;
+    padding: 40px;
+}
+
+.akachan_footer h3:not(.top) {
+    color: #fff;
+    background-color: #d2613c;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.akachan_footer h4:not(.top) {
+    color: #fff;
+    margin-top: 40px;
+}
+
+.g_map {
+    width: 100%;
+    margin-top: 40px;
+    height: 400px;
+}
+
+.copy {
+    text-align: center;
+    font-size: 11px;
+    padding-top: 40px;
+}
+
+
+/* スマホ用CSS */
+@media screen and (max-width: 768px) {
+
+
+    .pc_none {
+        display: block;
+    }
+
+    .sp_none {
+        display: none;
+    }
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .inner {
+        width: 100%;
+    }
+
+    .mv {
+        width: 100%;
+    }
+
+    .main_title_text {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    h2:not(.top) {
+        font-size: 1.8em;
+        margin-top: 20px;
+    }
+
+    h3:not(.top) {
+        font-size: 1.4em;
+        padding: 12px;
+        margin-bottom: 20px;
+    }
+
+    h4:not(.top) {
+        font-size: 1.2em;
+        margin-bottom: 16px;
+    }
+
+    p {
+        text-align: left;
+    }
+
+    .section {
+        margin-top: 40px;
+    }
+
+    /* 立ち上げの経緯 */
+    .reason {
+        width: 90%;
+        padding: 24px;
+        margin: 40px auto 0;
+    }
+
+
+    /* 神社について */
+    .shine_logo {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .shine_item {
+        display: block;
+        margin-top: 24px;
+    }
+
+    .shine_item .left {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .shine_item .right {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .shine .right img {
+        height: auto;
+    }
+
+    /* 赤ちゃん祭りを通じて行うこと */
+
+    .action,
+    .babyload {
+        padding: 40px 0;
+    }
+
+    .action_grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 24px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .action_grid-item {
+        padding: 16px;
+    }
+
+    /* 私たちの使命 */
+    .misson_list {
+        display: block;
+        margin-top: 0;
+    }
+
+    .misson_item {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .misson_icon {
+        width: 10%;
+        margin-right: 10px;
+    }
+
+    .misson_text {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+
+    /* 助産師インストラクター */
+    .sanshu_wrap {
+        display: block;
+    }
+
+    .instructor h4 {
+        text-align: center;
+    }
+
+    .instructor .left,
+    .instructor .right {
+        width: 100%;
+    }
+
+    .instructor-item {
+        margin-top: 16px;
+    }
+
+    .sanshu_img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .sanshu_img img {
+        width: 100%;
+    }
+
+    /* 体験できること */
+    .experience_list {
+        display: block;
+        margin-top: 0;
+    }
+
+    .experience_list li {
+        width: 100%;
+        margin-bottom: 24px;
+        padding: 16px;
+    }
+
+    .inner h4 {
+        font-size: 1.5em;
+        margin-top: 24px;
+        text-align: left;
+    }
+
+    .babyload_item {
+        display: block;
+    }
+
+    .babyload_item .left {
+        width: 60%;
+        margin: auto;
+    }
+
+    .babyload_item .right {
+        width: 100%;
+    }
+
+    .babyload_item .highlight {
+        display: block;
+        margin-top: 24px;
+    }
+
+
+    .babyload_height::before {
+        width: 60px;
+    }
+
+    .babyload_mind {
+        display: block;
+    }
+
+    .babyload_mind .left,
+    .babyload_mind .right {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    /* よくある質問 */
+    .cp_qa02 label {
+        font-size: 1em;
+        margin: 0 0 0 30px;
+    }
+
+    .cp_qa02 label::before {
+        margin-left: -30px;
+    }
+
+    /* フッター */
+    .akachan_footer {
+        padding: 40px 16px;
+    }
+
+    .akachan_footer h3:not(.top) {
+        padding: 0;
+    }
+
+    /*
+.akachan_footer p{
+  text-align: center;
+}
+	*/
+
+    .g_map {
+        width: 100%;
+        height: 300px;
+    }
+
+}
+
+/* Header Logo Size */
+.h-wrapper .h-logo img {
+    height: 80px;
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .h-wrapper .h-logo img {
+        height: 60px;
+    }
+}
+
+/* Header Padding Adjustment */
+.h-wrapper {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Layout Fix: Force 1 line */
+.h-wrapper {
+    flex-wrap: nowrap !important;
+    gap: 10px;
+}
+
+/* Ensure Logo fits */
+.h-wrapper .h-logo {
+    flex-shrink: 0;
+}
+
+.h-wrapper .h-logo img {
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Layout Fix: Force 1 line (High Specificity) */
+body .h-wrapper {
+    flex-wrap: nowrap !important;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Ensure Logo fits */
+body .h-wrapper .h-logo {
+    flex-shrink: 0;
+    margin-right: auto;
+    /* Push nav to right if needed */
+}
+
+body .h-wrapper .h-logo img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 80px;
+    /* Force height again */
+    width: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    body .h-wrapper .h-logo img {
+        height: 60px;
+    }
+}
+
+/* Layout Fix: Force 1 line (Maximum Specificity) */
+html body header .h-wrapper {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Force Logo Size & Fit */
+html body header .h-wrapper .h-logo {
+    flex: 0 0 auto !important;
+    margin-right: auto;
+    width: auto !important;
+    margin-left: 50px;
+}
+
+html body header .h-wrapper .h-logo img {
+    height: 80px !important;
+    width: auto !important;
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+    html body header .h-wrapper .h-logo img {
+        height: 60px !important;
+    }
+}
+
+/* Force Full Width Header */
+html body header .h-wrapper {
+    max-width: 100% !important;
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+    width: 100% !important;
+}
+
+/* Force Nav List 1 line & Compact */
+html body header .h-wrapper .nav-list {
+    flex-wrap: nowrap !important;
+    align-items: center;
+}
+
+html body header .h-wrapper .nav-list>.item:not(:last-child) {
+    margin-right: 20px !important;
+}
+
+/* PC Only Class */
+@media only screen and (max-width: 1024px) {
+    .pc_only {
+        display: none !important;
+    }
+}
+
+/* Crowdfunding Button Style */
+.btn-crowd {
+    display: inline-block;
+    background-color: #c55050;
+    color: #fff !important;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.btn-crowd:hover {
+    opacity: 0.8;
+}
+
+html body header .h-wrapper .nav-list>.item a {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    font-family: "Noto Sans JP", sans-serif !important;
+}
+
+
+
+/* スマホ用メニュー視認性向上 */
+.slide-menu .menu-txt {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Noto Sans JP", sans-serif !important;
+}
+
+/* Hero Section Crowdfunding Button (Red Background) */
+.btn-crowd-hero {
+    display: inline-block;
+    background-color: #c55050;
+    color: #fff !important;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    font-family: "Noto Sans JP", sans-serif !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-top: 24px;
+    box-shadow: 0 4px 10px rgba(197, 80, 80, 0.3);
+}
+
+.btn-crowd-hero:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(197, 80, 80, 0.4);
+}
+
+/* White Background Crowdfunding Button */
+.btn-crowd-white {
+    display: inline-block;
+    background-color: #fff;
+    color: #c55050 !important;
+    border: 2px solid #c55050;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    font-family: "Noto Sans JP", sans-serif !important;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    margin-top: 24px;
+    box-shadow: 0 4px 10px rgba(197, 80, 80, 0.3);
+}
+
+.btn-crowd-white:hover {
+    opacity: 0.6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(197, 80, 80, 0.4);
+}
+
+/* Footer Customization for Co-creation Partners */
+footer .f-wrapper {
+    justify-content: center !important;
+}
+
+footer .f-right.-logo {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    float: none !important;
+    /* Ensure no float interference */
+}
+
+@media only screen and (max-width: 768px) {
+    footer .f-right.-logo {
+        max-width: 100% !important;
+    }
+}
+
+/* Footer Background for Visibility */
+footer {
+    background-color: #333;
+    padding: 40px 0;
+    color: #fff;
+}
+
+/* Footer Header Styling - Specificity Fix */
+.f-wrapper h3 {
+    background-color: transparent !important;
+    color: #fff !important;
+    padding: 0 !important;
+    margin-bottom: 24px !important;
+    border: none !important;
+}
