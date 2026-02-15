@@ -24,3 +24,4 @@
  
 ## 参考資料・ガイドライン
 - `rule/hero section/fv_design_patterns.md`: キャッチコピーを読みやすくするFVのデザインパターン集
+- `rule/hero section/fast view/classification.md`: ファーストビューの種類分け（サイト名のみ、動画、ターゲット訴求型など）
