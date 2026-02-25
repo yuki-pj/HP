@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saji DAO - 星の降る町で、未来を耕そう。</title>
+    <meta name="description" content="Saji DAOは、鳥取市佐治町を応援するデジタルコミュニティです。">
+    <!-- Google Fonts: M PLUS Rounded 1c -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Global Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🍐</span> Saji DAO
+            </a>
+            <div class="nav-links">
+                <a href="#news">News</a>
+                <a href="#archive">Archive</a>
+                <a href="#join" class="nav-btn-join">Join</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg">
+            <!-- Background image will be set in CSS or via inline style if dynamic -->
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>星の降る町で、<br>未来を耕そう。</h1>
+            <p>佐治DAOは、鳥取市佐治町を応援する<br>デジタルコミュニティです。</p>
+            <a href="#join" class="btn-primary">コミュニティを覗いてみる ↓</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section-about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>佐治DAOは、デジタル上の「広場」です。<br>
+                美しい星空と梨の里、鳥取市佐治町。</p>
+                <p>この町を愛する人たちが集まり、<br>
+                アイデアを出し合ったり、ただお喋りしたり。</p>
+                <p>DAO（分散型自律組織）という新しいカタチで、<br>
+                ゆるやかに、でも確かに、<br>
+                町の未来を紡いでいきます。</p>
+            </div>
+            <div class="about-decoration">
+                <!-- Decorative elements via CSS or SVGs -->
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="section-news">
+        <div class="container">
+            <h2>News</h2>
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">2025.12.08</span>
+                    <span class="news-title">佐治町民運動会に参加しました！</span>
+                </li>
+                <li>
+                    <span class="news-date">2025.11.20</span>
+                    <span class="news-title">秋の梨収穫祭、無事終了しました。</span>
+                </li>
+                <li>
+                    <span class="news-date">2025.11.01</span>
+                    <span class="news-title">Saji DAO 公式サイトをプレオープン。</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Archive Section -->
+    <section id="archive" class="section-archive">
+        <div class="container">
+            <h2>Activity Log</h2>
+            <div class="archive-grid">
+                <!-- Example Items -->
+                <article class="archive-item" onclick="openModal('2025-10')">
+                    <div class="archive-thumb" style="background-color: #e0f2f1;">
+                        <span class="placeholder-icon">📷</span>
+                    </div>
+                    <h3>2025 Oct.</h3>
+                </article>
+                <article class="archive-item" onclick="openModal('2025-09')">
+                    <div class="archive-thumb" style="background-color: #fff9c4;">
+                         <span class="placeholder-icon">🌾</span>
+                    </div>
+                    <h3>2025 Sep.</h3>
+                </article>
+                <article class="archive-item" onclick="openModal('2025-08')">
+                    <div class="archive-thumb" style="background-color: #e1bee7;">
+                         <span class="placeholder-icon">🎆</span>
+                    </div>
+                    <h3>2025 Aug.</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="section-join">
+        <div class="container">
+            <h2>Join the Community</h2>
+            <p class="join-message">ロム専（見るだけ）も大歓迎。<br>まずは挨拶から。</p>
+            <div class="join-buttons">
+                <a href="#" class="btn-discord">
+                    <span class="icon">💬</span> Discordに参加する<br><span class="sub-text">メイン活動場所</span>
+                </a>
+                <a href="#" class="btn-line">
+                    <span class="icon">🟢</span> LINEで気軽に参加する<br><span class="sub-text">情報受け取り</span>
+                </a>
+            </div>
+            <p class="join-note">※ 参加費無料・匿名OK</p>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="section-support">
+        <div class="container">
+            <h2>Support Us</h2>
+            <div class="support-content">
+                <p>活動資金の寄付を受け付けています（JPYC）</p>
+                <div class="wallet-address-box">
+                    <span id="wallet-address">0x1234...abcd</span>
+                    <button onclick="copyToClipboard()" class="btn-copy">Copy</button>
+                    <span id="copy-success" class="copy-tooltip">Copied!</span>
+                </div>
+                <div class="qr-stamp">
+                    <div class="qr-placeholder">QR Code</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" class="social-icon" aria-label="X (Twitter)">X</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">佐治町公式サイト</a>
+            </div>
+            <p class="copyright">&copy; Saji DAO</p>
+        </div>
+    </footer>
+
+    <!-- Archive Modal -->
+    <div id="archive-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title">Activity Log</h3>
+            <div id="modal-body">
+                <!-- Content injected via JS -->
+                <p>詳細記事がここに表示されます。</p>
+                <div class="modal-placeholder-img"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

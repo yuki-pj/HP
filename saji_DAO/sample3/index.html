@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Tandem Style Portfolio</title>
+    <meta name="description" content="A minimalist portfolio inspired by The Tandem.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="#">Saji DAO</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#news">News</a></li>
+                <li><a href="#archive">Archive</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#cta" class="join-btn">JOIN</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero fade-in-up">
+        <div class="hero-content">
+            <h1 class="hero-title">佐治の未来を、<br>みんなの手で。</h1>
+            <p class="hero-subtitle">デジタルとリアルが交差する、新しい村おこしの形。</p>
+            <div class="scroll-down">
+                <span>Scroll Down</span>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Concept -->
+    <section id="about" class="section about fade-in-up">
+        <div class="container">
+            <h2 class="section-title">佐治DAOとは？</h2>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <!-- Placeholder for Saji Visual -->
+                    <div class="about-image"
+                        style="background-color: #f0f0f0; width: 100%; aspect-ratio: 16/9; margin-bottom: 2rem;"></div>
+                </div>
+                <div class="about-text">
+                    <p class="desc">
+                        星降る町、佐治。<br>
+                        美しい自然と温かい人々が暮らすこの町も、<br>
+                        人口減少という静かな課題（ペイン）を抱えています。<br>
+                        <br>
+                        佐治DAOは、デジタル（DAO）の力と、<br>
+                        リアルな体験を掛け合わせることで、<br>
+                        新しい「関わり代」をつくる実験的なコミュニティです。<br>
+                        <br>
+                        誰でも、どこからでも。<br>
+                        あなたの「好き」や「得意」が、<br>
+                        この町の新しい光になります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section id="news" class="section news fade-in-up">
+        <div class="container">
+            <h2 class="section-title">最新情報</h2>
+            <ul class="news-list">
+                <li class="news-item">
+                    <span class="news-date">2024.12.01</span>
+                    <span class="news-tag">イベント</span>
+                    <a href="#" class="news-link">「星空キャンプ」の開催が決定しました！参加者募集中。</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2024.11.20</span>
+                    <span class="news-tag">募集</span>
+                    <a href="#" class="news-link">古民家DIYプロジェクト、第1期メンバー募集開始。</a>
+                </li>
+                <li class="news-item">
+                    <span class="news-date">2024.11.10</span>
+                    <span class="news-tag">その他</span>
+                    <a href="#" class="news-link">佐治DAOの公式サイトをオープンしました。</a>
+                </li>
+            </ul>
+            <div class="news-more">
+                <a href="#" class="cta-link">News一覧へ &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Archive (Projects & Events) -->
+    <section id="archive" class="section archive fade-in-up">
+        <div class="container">
+            <h2 class="section-title">活動記録</h2>
+            <div class="archive-scroll-wrapper">
+                <div class="archive-track">
+                    <article class="archive-card">
+                        <div class="archive-image" style="background-color: #e5e5e5; width: 300px; aspect-ratio: 4/3;">
+                        </div>
+                        <div class="archive-info">
+                            <h3 class="archive-title">古民家お掃除大作戦</h3>
+                            <p class="archive-date">2024.10</p>
+                            <p class="archive-result">30名が参加し、古民家を清掃しました！</p>
+                        </div>
+                    </article>
+                    <article class="archive-card">
+                        <div class="archive-image" style="background-color: #e5e5e5; width: 300px; aspect-ratio: 4/3;">
+                        </div>
+                        <div class="archive-info">
+                            <h3 class="archive-title">星空BBQ交流会</h3>
+                            <p class="archive-date">2024.09</p>
+                            <p class="archive-result">満点の星空の下、50名で乾杯。</p>
+                        </div>
+                    </article>
+                    <article class="archive-card">
+                        <div class="archive-image" style="background-color: #e5e5e5; width: 300px; aspect-ratio: 4/3;">
+                        </div>
+                        <div class="archive-info">
+                            <h3 class="archive-title">NFTアートハッカソン</h3>
+                            <p class="archive-date">2024.08</p>
+                            <p class="archive-result">佐治をテーマにした10作品が誕生。</p>
+                        </div>
+                    </article>
+                    <article class="archive-card">
+                        <div class="archive-image" style="background-color: #e5e5e5; width: 300px; aspect-ratio: 4/3;">
+                        </div>
+                        <div class="archive-info">
+                            <h3 class="archive-title">梨狩り体験ツアー</h3>
+                            <p class="archive-date">2024.08</p>
+                            <p class="archive-result">旬の味覚をみんなで楽しみました。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value / Merit -->
+    <section id="value" class="section value fade-in-up">
+        <div class="container">
+            <h2 class="section-title">参加するとできること</h2>
+            <div class="value-grid">
+                <div class="value-item">
+                    <div class="value-icon">🤝</div>
+                    <h3>交流</h3>
+                    <p>地域の人や、バックグラウンドの異なる面白いメンバーと深く繋がれます。</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🌾</div>
+                    <h3>体験</h3>
+                    <p>農業体験や星空ツアーなど、都会では味わえないリアルで特別な体験手に入ります。</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">✨</div>
+                    <h3>貢献</h3>
+                    <p>NFT保有やプロジェクト参加を通じて、地域の未来づくりに直接貢献できます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links / Community -->
+    <section id="links" class="section links fade-in-up">
+        <div class="container">
+            <h2 class="section-title">コミュニティハブ</h2>
+            <div class="links-grid">
+                <a href="#" class="link-card discord">
+                    <div class="link-content">
+                        <h3>Discord</h3>
+                        <p>会話に参加する（メインの活動場所）</p>
+                    </div>
+                </a>
+                <a href="#" class="link-card twitter">
+                    <div class="link-content">
+                        <h3>X (Twitter)</h3>
+                        <p>最新情報をフォローする</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section cta fade-in-up">
+        <div class="cta-bg-overlay"></div>
+        <div class="container cta-container">
+            <h2 class="cta-title">あなたも、佐治の物語の<br>一部になりませんか？</h2>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button primary">Discordに参加する（無料）</a>
+                <a href="#" class="cta-button secondary">お問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#news">News</a>
+                <a href="#archive">Archive</a>
+                <a href="#links">Links</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p class="copyright">&copy; 2024 Saji DAO. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
