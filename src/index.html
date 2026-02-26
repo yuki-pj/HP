@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>フリ×フリ | 時間とお金と場所に捉われない自由なWeb系フリーランスに！</title>
+    <title>フリ×フリ | プロのハウスクリーニング基準</title>
 
-    <!-- SEO & OGP -->
-    <meta name="description"
-        content="フリ×フリは、時間とお金と場所に捉われない自由なWeb系フリーランスを目指す方のための支援サービスです。お仕事紹介やコミュニティ、直伝ノウハウであなたをサポートします。">
-    <!-- <meta property="og:image" content="./img/og-image.png"> -->
-    <!-- <link rel="icon" href="./img/favicon.ico"> -->
+    <meta name="description" content="透明な料金体系、環境に優しい製品、保証付きのプロのクリーニングサービスを提供します。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Quicksand:wght@600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Phosphor Icons (Script) -->
+    <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- CSS -->
@@ -32,10 +28,15 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <i class="ph-fill ph-paw-print" style="margin-right: 4px;"></i> フリ×フリ
+                <i class="ph-fill ph-paw-print" style="color:var(--color-main);"></i> フリ×フリ
             </div>
-            <a href="#cta" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">
-                まずはLINEお友達追加 <i class="ph-bold ph-caret-right"></i>
+            <nav class="nav-links">
+                <a href="#services">Our Services</a>
+                <a href="#comparison">Pricing</a>
+                <a href="#results">Results</a>
+            </nav>
+            <a href="#book" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.9rem;">
+                Request Quote
             </a>
         </div>
     </header>
@@ -43,112 +44,294 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <!-- 飾り図形（仮テキストで表現、実際はSVG等を推奨） -->
-            <div class="shape shape-blob-1"
-                style="background:var(--color-sub-blue); border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; opacity:0.1;">
-            </div>
-
+            <span class="section-label">WHY CHOOSE US</span>
             <h1>
-                <span class="highlight">フリ×フリ</span> に入って<br>
-                <span class="text-orange">時間</span>と<span class="text-blue">お金</span>と<span
-                    class="text-green">場所</span>に捉われない
+                Professional Cleaning Standards<br>
+                You Can Trust
             </h1>
-            <p class="hero-subtitle">
-                自由なWeb系フリーランスに！
+            <p class="subtitle">
+                We don't just clean; we care for your home with transparent pricing, eco-friendly products, and a
+                satisfaction guarantee.
             </p>
 
-            <div style="margin: 40px 0;">
-                <a href="#cta" class="btn btn-primary">
-                    <span>利用は無料！まずは<br>LINEお友達に追加する</span>
-                    <i class="ph-bold ph-caret-right" style="font-size: 1.5em;"></i>
-                </a>
-            </div>
-
-            <!-- キャッチーなイラスト配置エリア -->
-            <div
-                style="display:flex; justify-content:center; gap: 20px; align-items:flex-end; margin-top: 40px; flex-wrap: wrap;">
-                <!-- 猫の代わりのプレースホルダー -->
-                <img src="https://placehold.co/100x100/f0f0f0/ccc?text=Cat" alt="ねこのイラスト" style="border-radius:10px;">
-                <img src="https://placehold.co/120x120/f0f0f0/ccc?text=Cat" alt="ねこのイラスト" style="border-radius:10px;">
-                <img src="https://placehold.co/100x120/f0f0f0/ccc?text=Cat" alt="ねこのイラスト" style="border-radius:10px;">
-                <img src="https://placehold.co/90x110/f0f0f0/ccc?text=Cat" alt="ねこのイラスト" style="border-radius:10px;">
-                <img src="https://placehold.co/110x100/f0f0f0/ccc?text=Cat" alt="ねこのイラスト" style="border-radius:10px;">
+            <!-- Trust Features Cards (overlaid on hero bottom) -->
+            <div class="trust-grid">
+                <div class="card trust-card">
+                    <div class="icon">
+                        <i class="ph-fill ph-shield-check"></i>
+                    </div>
+                    <h3>Certified Professionals</h3>
+                    <p style="font-size:0.9rem; color:#666;">Every staff member is rigorously vetted, fully insured, and
+                        professionally trained to handle any mess.</p>
+                </div>
+                <div class="card trust-card">
+                    <div class="icon">
+                        <i class="ph-fill ph-money"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p style="font-size:0.9rem; color:#666;">No hidden fees. What we quote is what you pay. We offer
+                        competitive rates for premium service.</p>
+                </div>
+                <div class="card trust-card">
+                    <div class="icon">
+                        <i class="ph-fill ph-leaf"></i>
+                    </div>
+                    <h3>Eco-Friendly Products</h3>
+                    <p style="font-size:0.9rem; color:#666;">We use safe, non-toxic cleaning agents that are tough on
+                        dirt but safe for your family and pets.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
+    <!-- Our Services -->
+    <section id="services" class="services">
         <div class="container">
-            <div class="features-grid">
+            <div class="services-header">
+                <div>
+                    <h2 style="display:flex; align-items:center; gap:8px;"><i class="ph-fill ph-drop"
+                            style="color:var(--color-sub-blue);"></i> Our Services</h2>
+                    <p style="color:#666; max-width:500px;">Comprehensive cleaning solutions tailored to your specific
+                        needs.</p>
+                </div>
+                <a href="#" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">View Full Price List
+                    <i class="ph-bold ph-arrow-right"></i></a>
+            </div>
 
-                <!-- Feature 1 -->
-                <div class="card">
-                    <div class="card-icon-wrapper" style="background-color: var(--color-main);">
-                        <i class="ph-fill ph-gift" style="font-size: 3rem; color: #fff;"></i>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Air+Conditioner" alt="エアコン"
+                        class="service-img">
+                    <div class="service-content">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3>Air Conditioner</h3>
+                            <b style="color:var(--color-sub-blue);">¥12,000<span
+                                    style="font-size:0.7em;">/unit</span></b>
+                        </div>
+                        <p>Save energy and improve air quality instantly by removing internal dust and mold.</p>
                     </div>
-                    <h3 style="color:var(--color-text-main);">定期的な<br>お仕事の紹介</h3>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Range+Hood" alt="換気扇" class="service-img">
+                    <div class="service-content">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3>Range Hood</h3>
+                            <b style="color:var(--color-sub-blue);">¥15,000<span
+                                    style="font-size:0.7em;">/unit</span></b>
+                        </div>
+                        <p>Disassemble and deep clean to remove stubborn grease and sticky oil residues.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Bathroom" alt="お風呂" class="service-img">
+                    <div class="service-content">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3>Bathroom</h3>
+                            <b style="color:var(--color-sub-blue);">¥14,000<span
+                                    style="font-size:0.7em;">/unit</span></b>
+                        </div>
+                        <p>Eliminate tough mold, water stains, and limescale buildup from all surfaces.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://placehold.co/400x300/e2e8f0/64748b?text=Washing+Machine" alt="洗濯機"
+                        class="service-img">
+                    <div class="service-content">
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h3>Washing Machine</h3>
+                            <b style="color:var(--color-sub-blue);">¥16,800<span
+                                    style="font-size:0.7em;">/unit</span></b>
+                        </div>
+                        <p>Deep clean hidden drum mold and bacteria to prevent bad odors on laundry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitor Comparison -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <h2 class="section-title">Competitor Comparison</h2>
+            <p style="color:#666; margin-bottom:var(--space-md);">Why customers switch to フリ×フリ for their home care
+                needs.</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Features</th>
+                        <th class="highlight-col" style="color:var(--color-sub-blue);">フリ×フリ</th>
+                        <th>Typical Agency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pricing Transparency</td>
+                        <td class="highlight-col"><b><i class="ph-fill ph-check-circle icon-check"></i> Fixed Quote</b>
+                        </td>
+                        <td><i class="ph ph-minus-circle" style="color:#999; vertical-align:middle;"></i> Variable /
+                            Add-ons</td>
+                    </tr>
+                    <tr>
+                        <td>Eco-Friendly Detergents</td>
+                        <td class="highlight-col"><b><i class="ph-fill ph-check-circle icon-check"></i> Standard
+                                (Free)</b></td>
+                        <td><i class="ph ph-warning-circle" style="color:#999; vertical-align:middle;"></i> Extra Cost
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Staff Vetting</td>
+                        <td class="highlight-col"><b><i class="ph-fill ph-check-circle icon-check"></i> In-House
+                                Training</b></td>
+                        <td><i class="ph-fill ph-warning icon-warn"></i> Outsourced</td>
+                    </tr>
+                    <tr>
+                        <td>Re-Clean Guarantee</td>
+                        <td class="highlight-col"><b><i class="ph-fill ph-check-circle icon-check"></i> 100%
+                                Guaranteed</b></td>
+                        <td><i class="ph ph-x-circle" style="color:#999; vertical-align:middle;"></i> None</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- See the Difference -->
+    <section id="results" class="results">
+        <div class="container">
+            <div class="results-header">
+                <span class="section-label">REAL RESULTS</span>
+                <h2>See the Difference</h2>
+                <p style="color:#666;">Our technicians transform dirty, neglected appliances into sparkling clean assets
+                    for your home.</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Kitchen Range Hood</h3>
+                    <div class="before-after-img">
+                        <div style="position:relative;">
+                            <img src="https://placehold.co/300x200/475569/94a3b8?text=Before" alt="Before">
+                        </div>
+                        <div style="position:relative;">
+                            <img src="https://placehold.co/300x200/cbd5e1/f8fafc?text=After" alt="After">
+                        </div>
+                    </div>
+                    <p style="text-align:center; font-size:0.85rem; color:#666; margin-top:12px; margin-bottom:0;">Heavy
+                        grease buildup removed completely after 2 hours.</p>
+                </div>
+                <div class="result-card">
+                    <h3>Bathroom Tiles</h3>
+                    <div class="before-after-img">
+                        <div style="position:relative;">
+                            <img src="https://placehold.co/300x200/334155/64748b?text=Before" alt="Before">
+                        </div>
+                        <div style="position:relative;">
+                            <img src="https://placehold.co/300x200/e2e8f0/ffffff?text=After" alt="After">
+                        </div>
+                    </div>
+                    <p style="text-align:center; font-size:0.85rem; color:#666; margin-top:12px; margin-bottom:0;">Mold
+                        in grouting eradicated and tiles polished.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Book -->
+    <section id="book" class="workflow">
+        <div class="container">
+            <div class="workflow-box">
+                <span class="section-label">SIMPLE WORKFLOW</span>
+                <h2 class="section-title">How to Book Your Clean</h2>
+                <p style="color:#666; max-width:600px; margin:0 auto;">Getting your home cleaned is simple with our
+                    transparent, no-hassle process.</p>
+
+                <div class="step-grid">
+                    <div class="step-card">
+                        <div class="step-icon"><i class="ph-fill ph-chat-teardrop-dots"></i></div>
+                        <h3>1. Inquiry</h3>
+                        <p style="font-size:0.9rem; color:#666;">Contact us via phone or our simple web form to tell us
+                            exactly what you need.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="ph-fill ph-calendar-check"></i></div>
+                        <h3>2. Quotation & Date</h3>
+                        <p style="font-size:0.9rem; color:#666;">We provide a clear, upfront quote and agree on a
+                            service date that works for you.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-icon"><i class="ph-fill ph-sparkle"></i></div>
+                        <h3>3. Professional Clean</h3>
+                        <p style="font-size:0.9rem; color:#666;">Our expert staff arrive on time to clean your home
+                            thoroughly and efficiently.</p>
+                    </div>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="card">
-                    <div class="card-icon-wrapper" style="background-color: #E2C968;">
-                        <i class="ph-fill ph-laptop" style="font-size: 3rem; color: #fff;"></i>
-                    </div>
-                    <h3 style="color:var(--color-text-main);">実務で使える<br>資料やキットの提供</h3>
+                <div style="margin-top:40px;">
+                    <a href="#" class="btn btn-primary">Start Your Booking <i class="ph-bold ph-arrow-right"></i></a>
                 </div>
-
-                <!-- Feature 3 -->
-                <div class="card">
-                    <div class="card-icon-wrapper" style="background-color: var(--color-sub-blue);">
-                        <i class="ph-fill ph-users-three" style="font-size: 3rem; color: #fff;"></i>
-                    </div>
-                    <h3 style="color:var(--color-text-main);">みんなとつながれる<br>コミュニティ</h3>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="card">
-                    <div class="card-icon-wrapper" style="background-color: var(--color-sub-green);">
-                        <i class="ph-fill ph-student" style="font-size: 3rem; color: #fff;"></i>
-                    </div>
-                    <h3 style="color:var(--color-text-main);">Web制作会社直伝！<br>ノウハウゲット</h3>
-                </div>
-
             </div>
         </div>
     </section>
 
     <!-- Bottom CTA -->
-    <section id="cta" class="cta-section bg-pattern"
-        style="background-color: var(--color-main); color: #fff; padding: var(--space-xl) var(--space-md);">
-        <div class="container"
-            style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
-            <h2
-                style="color: #fff; font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: var(--space-md); text-align: center;">
-                あなたも自由なWeb系フリーランスへ！
-            </h2>
-            <a href="#" class="btn"
-                style="background-color: #fff; color: var(--color-main); font-size: 1.25rem; padding: 20px 48px; box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
-                <span>利用は無料！まずは<br>LINEお友達に追加する</span>
-                <i class="ph-bold ph-caret-right" style="font-size: 1.5em; margin-left: 8px;"></i>
-            </a>
-            <!-- 装飾用イラスト -->
-            <div style="position: absolute; right: -50px; bottom: -80px; transform: rotate(-15deg); opacity: 0.8;">
-                <i class="ph-fill ph-paw-print" style="font-size: 120px; color: rgba(255,255,255,0.1);"></i>
-            </div>
-            <div style="position: absolute; left: 0; top: -40px; transform: rotate(15deg); opacity: 0.8;">
-                <i class="ph-fill ph-paw-print" style="font-size: 80px; color: rgba(255,255,255,0.1);"></i>
+    <section class="bottom-cta">
+        <div class="container">
+            <div class="bottom-cta-grid">
+                <div class="img-placeholder-large">
+                    <div style="text-align:center;">
+                        <i class="ph-fill ph-users-three" style="font-size:4rem;"></i>
+                        <h3>Our Dedicated Team</h3>
+                        <p>Serving the greater area since 2018</p>
+                    </div>
+                </div>
+                <div>
+                    <span class="section-label">OUR COMMITMENT</span>
+                    <h2 style="font-size:clamp(2rem, 4vw, 3rem); margin-bottom:24px;">Excellence in Every Detail</h2>
+                    <p style="font-size:1.1rem; color:#555; margin-bottom:24px;">
+                        At フリ×フリ, we believe that a clean home is the foundation of a happy life. Our staff aren't just
+                        cleaners; they are hygiene specialists trained to respect your privacy and property.
+                    </p>
+                    <ul style="list-style:none; padding:0; margin-bottom:32px;">
+                        <li style="margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                            <i class="ph-fill ph-check-circle"
+                                style="color:var(--color-sub-blue); font-size:1.5rem;"></i> Background-checked, fully
+                            insured staff
+                        </li>
+                        <li style="margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                            <i class="ph-fill ph-check-circle"
+                                style="color:var(--color-sub-blue); font-size:1.5rem;"></i> Ongoing training in latest
+                            cleaning technologies
+                        </li>
+                        <li style="display:flex; align-items:center; gap:8px;">
+                            <i class="ph-fill ph-check-circle"
+                                style="color:var(--color-sub-blue); font-size:1.5rem;"></i> Satisfaction guarantee on
+                            every clean we do
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="logo" style="color:#fff; margin-bottom: 20px;">
-                <i class="ph-fill ph-paw-print"></i> フリ×フリ
+        <div class="container"
+            style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+            <div class="logo" style="color:#fff;">
+                <i class="ph-fill ph-paw-print" style="color:var(--color-main);"></i> フリ×フリ
+                <span
+                    style="display:block; font-size:0.8rem; font-weight:normal; opacity:0.8; margin-top:4px;">Professional
+                    cleaning services that give you your free time back.</span>
             </div>
-            <p style="font-size: 0.8rem; opacity: 0.7;">&copy; 2026 フリ×フリ All rights reserved.</p>
+
+            <div style="display:flex; gap:20px; font-size:0.9rem; opacity:0.8;">
+                <a href="#" style="color:#fff;">Privacy Policy</a>
+                <a href="#" style="color:#fff;">Terms of Service</a>
+                <a href="#" style="color:#fff;">Contact</a>
+            </div>
+
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-bottom:0;">&copy; 2026 フリ×フリ Inc. All rights reserved.</p>
         </div>
     </footer>
 
