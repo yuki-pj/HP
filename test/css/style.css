@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   Design Tokens (デザインシステム)
+   ========================================================================== */
+:root {
+    /* Colors */
+    --color-base: #FFFFFF;
+    --color-base-alt: #FAFAFA;
+    --color-main: #E65A28;
+    /* フリ×フリ オレンジ */
+    --color-main-hover: #D74A1A;
+    --color-sub-blue: #2B82CB;
+    --color-sub-green: #5EAA36;
+    --color-accent: #FACD3C;
+    --color-text-main: #333333;
+    --color-text-brown: #5B3E31;
+    --color-border: #E0E0E0;
+
+    /* Typography */
+    --font-family-base: 'M PLUS Rounded 1c', 'Quicksand', sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Border Radius */
+    --radius-capsule: 9999px;
+    --radius-card: 20px;
+    --radius-sm: 8px;
+
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 32px;
+    --space-lg: 64px;
+    --space-xl: 96px;
+
+    /* Shadow */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text-main);
+    background-color: var(--color-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ポップな方眼紙背景パターン */
+.bg-pattern {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-position: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+    color: var(--color-text-brown);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--space-md);
+}
+
+a {
+    color: var(--color-sub-blue);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 40px;
+    border-radius: var(--radius-capsule);
+    font-weight: 700;
+    font-size: 1.125rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+    gap: 8px;
+}
+
+.btn-primary {
+    background-color: var(--color-main);
+    color: #fff;
+}
+
+.btn-primary:active,
+.btn-primary:hover {
+    background-color: var(--color-main-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px -3px rgba(230, 90, 40, 0.3);
+    color: #fff;
+}
+
+/* Cards */
+.card {
+    background: var(--color-base);
+    border-radius: var(--radius-card);
+    padding: var(--space-md);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon-wrapper {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-md);
+}
+
+/* Badge/Tag */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: var(--radius-capsule);
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   Layout Sections
+   ========================================================================== */
+
+/* Header */
+.header {
+    padding: var(--space-sm) 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-text-brown);
+}
+
+/* Hero Section */
+.hero {
+    padding: 160px 0 100px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: var(--space-md);
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+.hero h1 .highlight {
+    display: inline-block;
+    background-color: var(--color-text-brown);
+    color: #fff;
+    padding: 6px 20px;
+    border-radius: var(--radius-sm);
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.hero h1 .text-orange {
+    color: var(--color-main);
+}
+
+.hero h1 .text-blue {
+    color: var(--color-sub-blue);
+}
+
+.hero h1 .text-green {
+    color: var(--color-sub-green);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 700;
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-brown);
+}
+
+/* Features Section */
+.features {
+    padding: var(--space-xl) 0;
+    background-color: var(--color-base-alt);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+/* Shapes Decoration (Aesthetic elements) */
+.shape {
+    position: absolute;
+    z-index: -1;
+}
+
+.shape-blob-1 {
+    top: 10%;
+    left: -5%;
+    width: 300px;
+    height: auto;
+    opacity: 0.8;
+}
+
+.shape-blob-2 {
+    top: 50%;
+    right: -5%;
+    width: 250px;
+    height: auto;
+    opacity: 0.8;
+}
+
+/* CTA Footer Section */
+.cta-section {
+    padding: var(--space-xl) 0;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-text-brown);
+    color: #fff;
+    padding: var(--space-lg) 0 var(--space-sm);
+    text-align: center;
+}
+
+/* ==========================================================================
+   Responsive Utilities
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
