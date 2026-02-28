@@ -1,0 +1,453 @@
+@charset "UTF-8";
+
+/* ==========================================================
+   Base Reset
+========================================================== */
+:root {
+  /* Design Tokens for poporpop */
+  --color-primary: #ff5a5f;
+  /* アクセントカラー（赤系） */
+  --color-secondary: #003366;
+  /* メインテキスト（濃紺） */
+  --color-bg-base: #fff9f5;
+  /* 暖かみのある白背景 */
+  --color-bg-alt: #fff3e6;
+  /* 代替背景（淡黄色系） */
+  --color-btn: #ff5a5f;
+  /* ボタンカラー */
+  --color-btn-hover: #e0484d;
+  /* ボタンホバー */
+  --border-radius-lg: 30px;
+  --border-radius-md: 16px;
+  --border-radius-sm: 8px;
+  --font-base: "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  --font-logo: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  line-height: 1.6;
+  color: var(--color-secondary);
+  background-color: var(--color-bg-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================
+   Wireframe Utility & Constants
+========================================================== */
+.placeholder-img {
+  background-color: #ffe6e6;
+  border: 2px dashed var(--color-primary);
+  border-radius: var(--border-radius-lg);
+  /* 参考サイトの「角丸」特徴を反映 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  width: 100%;
+  color: #666;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.wf-section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.btn-more {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--border-radius-lg);
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-more:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+/* ==========================================================
+   1. Header
+========================================================== */
+.header {
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: var(--font-logo);
+  color: var(--color-primary);
+  font-weight: 800;
+  font-size: 1.5rem;
+  border: 2px solid var(--color-primary);
+  padding: 5px 15px;
+  border-radius: var(--border-radius-sm);
+  background: white;
+  transform: rotate(-2deg);
+}
+
+.global-nav ul {
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   2. Hero / MV
+========================================================== */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-bg-alt);
+  border-bottom: 1px solid #ffe0cc;
+  border-radius: 0 0 40px 40px;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.hero-sub {
+  color: #666;
+}
+
+/* ==========================================================
+   3. About & 4. Service Layout Core (Mobile First)
+========================================================== */
+.two-col,
+.service-item {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* スマホ表示時は「画像が先、テキストが後」にするなどの調整可だが、
+   デフォルトのHTML順序（テキスト→画像、画像→テキスト）に依存する */
+.img-col,
+.text-col {
+  width: 100%;
+}
+
+.service-item {
+  margin-bottom: 60px;
+  background-color: white;
+  border: 2px solid #ffe0cc;
+  padding: 40px;
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 10px 30px rgba(255, 90, 95, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+.text-col h2,
+.text-col h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* ==========================================================
+   5. Contact
+========================================================== */
+.contact {
+  background-color: #fdfdfd;
+}
+
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 12px;
+  border: 1px solid #eaeaea;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* 角丸を多用するデザインを踏襲 */
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.privacy-box {
+  height: 150px;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.check-agree {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 18px;
+  background: var(--color-btn);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255, 90, 95, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: var(--color-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 90, 95, 0.4);
+}
+
+/* ==========================================================
+   6. Footer
+========================================================== */
+.footer {
+  background-color: #111;
+  color: #fff;
+  padding: 60px 20px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-logo {
+  font-family: var(--font-logo);
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: 800;
+  border: 2px solid var(--color-primary);
+  padding: 5px 20px;
+  background: white;
+  border-radius: var(--border-radius-sm);
+  transform: rotate(2deg);
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-contact {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--border-radius-lg);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-contact:hover {
+  background: var(--color-btn-hover);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ==========================================================
+   Media Queries (PC Layout)
+========================================================== */
+@media (min-width: 768px) {
+  .wf-section {
+    padding: 100px 20px;
+  }
+
+  /* Header */
+  .hamburger {
+    display: none;
+  }
+
+  /* Hero */
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  /* Column Layouts */
+  .two-col,
+  .service-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+
+  /* Alternating image/text positions */
+  .service-item.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .img-col,
+  .text-col {
+    width: 50%;
+  }
+
+  .service-item {
+    padding: 50px;
+  }
+
+  /* Contact */
+  .contact-form {
+    padding: 60px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-left {
+    display: block;
+  }
+
+  .footer-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+
+  .footer-right {
+    align-items: flex-end;
+  }
+}
+
+/* ==========================================================
+   Media Queries (Mobile Adjustments)
+========================================================== */
+@media (max-width: 767px) {
+  .global-nav {
+    display: none;
+    /* スマホではハンバーガーメニュー使用想定 */
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Service Section Layout (Mobile: Top to Bottom override) */
+  .service-item {
+    flex-direction: column !important;
+  }
+}
